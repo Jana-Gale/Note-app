@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Inter:wght@300;400;500&family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.note-area {
+    width: 600px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+
+/* input style */
+
+.title {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    text-align: left;
+}
+
+
+/* textarea style */
+
+.note-text {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    display: none;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* //notes style */
+
+#notes {
+    max-width: 1200px;
+    /* background-color: aquamarine; */
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.note {
+    width: 270px;
+    padding: 20px;
+    margin-top: 8px;
+    vertical-align: middle;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.note-now {
+    padding: 10px;
+    border: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.note p {
+    margin-top: 6px;
+    padding-bottom: 25px;
+    word-wrap: break-word;
+}
+
+.note h3 {
+    word-wrap: break-word;
+}
+
+.note i {
+    visibility: hidden;
+}
+
+
+/* kaliyaa marka mose ka lasaaro soo muuji */
+
+.note i.show {
+    visibility: visible;
+    position: relative;
+    font-size: 50px;
+    left: 90%;
+    top: 90%;
+    color: cadetblue;
+}
+
+.note:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+
+/* // screen media quary  responsive*/
+
+@media only screen and (max-width: 600px) {
+    #notes {
+        grid-template-columns: 1fr;
+    }
+    .note-area {
+        width: 400px;
+    }
+}
